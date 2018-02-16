@@ -21,4 +21,13 @@ class Current(Account):
     def __init__(self, name, balance):
         super().__init__(name, balance, min_balance = -1000)
 
-x = Current('Ziyad', 500)
+    def __str__(self):
+        return '{}\'s Current Account: Balance £{}'.format(self.name, self.balance)
+
+
+class Savings(Account):
+    def __init__(selfself, name, balance):
+        super().__init__(name, balance, min_balance=0)
+
+    def __str__(self):
+        return '{}\'s Savings Account: Balance £{}'.format(self.name, self.balance)
